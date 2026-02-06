@@ -1,5 +1,5 @@
 const frases = [
-    "Para mi niña bonita, con mucho cariño", // ESTA SALDRÁ SIN FOTO
+    "Para mi niña bonita, con mucho cariño",
     "El primer día de cita en el parque, el día de nuestro primer beso. Desde ese día amo acostarme debajo de los árboles a sentir la frescura de ellos",
     "Los parques representan momentos especiales, como el día en el que nos hicieron pololindas",
     "Los días en casa se han hecho mis favoritos para estar juntas",
@@ -20,32 +20,30 @@ const frases = [
 ];
 
 const fotos = [
-    "",// ESPACIO VACÍO PARA LA PRIMERA FRASE
-    "foto1.jpg.jpeg", "foto2.jpg.jpeg", "foto3.jpg.jpeg", "foto4.jpg.jpeg",
+    
+    "foto0.jpe.jpeg", "foto1.jpg.jpeg", "foto2.jpg.jpeg", "foto3.jpg.jpeg", "foto4.jpg.jpeg",
     "foto5.jpg.jpeg", "foto6.jpg.jpeg", "foto7.jpg.jpeg", "foto8.jpg.jpeg",
     "foto9.jpg.jpeg", "foto10.jpg.jpeg", "foto11.jpg.jpeg", "foto12.jpg.jpeg",
     "foto13.jpg.jpeg", "foto14.jpg.jpeg", "foto15.jpg.jpeg", "foto16.jpg.jpeg",
-    "foto17.jpg.jpeg", // Agregué una extra para que coincida con la cantidad de frases
+    "foto17.jpg.jpeg", 
 ];
 
 let i = 0;
 
 function cambiar() {
+    // Avanzamos al siguiente índice
     i = (i + 1) % frases.length;
     
     const elementoTexto = document.getElementById("texto");
     const elementoImagen = document.getElementById("imagen");
 
     if (elementoTexto && elementoImagen) {
+        // Cambiamos el texto
         elementoTexto.innerHTML = frases[i];
-
-        // Si el nombre de la foto está vacío (como en la posición 0), ocultamos la imagen
-        if (fotos[i] === "") {
-            elementoImagen.style.display = "none";
-        } else {
-            elementoImagen.style.display = "block";
-            elementoImagen.src = fotos[i];
-        }
+        // Cambiamos la imagen directamente (ya no necesitamos ocultarla)
+        elementoImagen.src = fotos[i];
+        
+        console.log("Mostrando frase y foto número: " + i);
     }
 }
 
