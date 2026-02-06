@@ -5,44 +5,70 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden; /* Evita que aparezcan barras de desplazamiento con los corazones */
+    overflow: hidden; /* Importante para que los corazones no estiren la pantalla */
     position: relative;
     width: 100vw;
     height: 100vh;
 }
 
-body::before { content: "🌸"; position: absolute; top: 20px; left: 20px; font-size: 2rem; }
-body::after { content: "✨"; position: absolute; bottom: 20px; right: 20px; font-size: 2rem; }
+/* Decoración fija en las 4 esquinas */
+body::before { 
+    content: "🌸"; 
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    font-size: 2rem; 
+    z-index: 1;
+}
+
+body::after { 
+    content: "✨"; 
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
+    font-size: 2rem; 
+    z-index: 1;
+}
+
+/* Agregamos dos flores más en las otras esquinas */
+.extra-deco-izq { position: absolute; bottom: 20px; left: 20px; font-size: 2rem; z-index: 1; }
+.extra-deco-der { position: absolute; top: 20px; right: 20px; font-size: 2rem; z-index: 1; }
 
 #contenedor {
     text-align: center;
     cursor: pointer;
     padding: 20px;
-    z-index: 2;
+    z-index: 2; /* Para que esté por encima de los corazones */
+    max-width: 600px; /* Para que no se estire demasiado en PC */
 }
 
 #imagen {
-    max-width: 85%;
-    max-height: 70vh; /* Para que la foto no sea más grande que la pantalla */
+    max-width: 90%;
+    max-height: 65vh;
     height: auto;
-    border: 10px solid white; 
-    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4); /* Sombra para que resalte */
+    border: 12px solid white; 
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4); 
     border-radius: 4px;
-    transition: opacity 0.3s ease; /* Transición suave al cambiar */
+    transition: transform 0.3s ease;
 }
-    #imagen:hover {
+
+#imagen:hover {
     transform: scale(1.02) rotate(1deg);
 }
 
 #texto {
-    /* Aquí está tu Comic Sans con seguridad */
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     font-size: 1.5rem;
     color: #d81b60;
-    margin-top: 20px;
+    margin-top: 25px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
-    padding: 0 15px;
-    line-height: 1.4; /* Espacio entre líneas para que sea fácil de leer */
+    padding: 15px 25px;
+    line-height: 1.5;
+    /* Efecto de burbuja de texto suave */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    display: inline-block; /* Para que el fondo solo cubra el texto */
 }
 
 
