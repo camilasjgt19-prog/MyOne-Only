@@ -28,18 +28,26 @@ const fotos = [
 ];
 
 let i = 0;
-
 function cambiar() {
-    i = (i + 1) % frases.length;
+    i = (i + 1); // Aumentamos para ir a la siguiente
+
+    // Si pasamos la última frase, volvemos a la primera
+    if (i >= frases.length) {
+        i = 0;
+    }
     
     const elementoTexto = document.getElementById("texto");
     const elementoImagen = document.getElementById("imagen");
 
     if (elementoTexto && elementoImagen) {
         elementoTexto.innerHTML = frases[i];
-        elementoImagen.src = fotos[i];
-        console.log("Cambiado a la frase " + i);
-    } else {
-        console.error("No encontré los IDs 'texto' o 'imagen' en el HTML");
+
+        // Solo cambia la foto si existe una foto para ese número de frase
+        // (Como tienes 18 frases y 17 fotos, la última frase repetirá la última foto o puedes dejar una fija)
+        if (fotos[i]) {
+            elementoImagen.src = fotos[i];
+        }
     }
 }
+
+
