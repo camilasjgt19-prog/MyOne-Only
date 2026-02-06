@@ -21,7 +21,7 @@ const frases = [
 
 const fotos = [
     
-    "foto0.jpe.jpeg", "foto1.jpg.jpeg", "foto2.jpg.jpeg", "foto3.jpg.jpeg", "foto4.jpg.jpeg",
+    "foto0.jpe.png", "foto1.jpg.jpeg", "foto2.jpg.jpeg", "foto3.jpg.jpeg", "foto4.jpg.jpeg",
     "foto5.jpg.jpeg", "foto6.jpg.jpeg", "foto7.jpg.jpeg", "foto8.jpg.jpeg",
     "foto9.jpg.jpeg", "foto10.jpg.jpeg", "foto11.jpg.jpeg", "foto12.jpg.jpeg",
     "foto13.jpg.jpeg", "foto14.jpg.jpeg", "foto15.jpg.jpeg", "foto16.jpg.jpeg",
@@ -46,6 +46,7 @@ function cambiar() {
         console.log("Mostrando frase y foto número: " + i);
     }
 }
+
 
 
 
