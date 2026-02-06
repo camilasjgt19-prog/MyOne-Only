@@ -25,7 +25,7 @@ const fotos = [
     "foto5.jpg.jpeg", "foto6.jpg.jpeg", "foto7.jpg.jpeg", "foto8.jpg.jpeg",
     "foto9.jpg.jpeg", "foto10.jpg.jpeg", "foto11.jpg.jpeg", "foto12.jpg.jpeg",
     "foto13.jpg.jpeg", "foto14.jpg.jpeg", "foto15.jpg.jpeg", "foto16.jpg.jpeg",
-    "foto17.jpg.jpeg", "foto1.jpg.jpeg" // Agregué una extra para que coincida con la cantidad de frases
+    "foto17.jpg.jpeg", // Agregué una extra para que coincida con la cantidad de frases
 ];
 
 let i = 0;
@@ -48,6 +48,7 @@ function cambiar() {
         }
     }
 }
+
 
 
 
