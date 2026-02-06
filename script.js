@@ -31,21 +31,19 @@ const fotos = [
 let i = 0;
 
 function cambiar() {
-    // Avanzamos al siguiente índice
     i = (i + 1) % frases.length;
     
     const elementoTexto = document.getElementById("texto");
     const elementoImagen = document.getElementById("imagen");
 
     if (elementoTexto && elementoImagen) {
-        // Cambiamos el texto
         elementoTexto.innerHTML = frases[i];
-        // Cambiamos la imagen directamente (ya no necesitamos ocultarla)
-        elementoImagen.src = fotos[i];
+         elementoImagen.src = fotos[i];
         
-        console.log("Mostrando frase y foto número: " + i);
+        console.log("buscando archivo: " + fotos [i]);
     }
 }
+
 
 
 
