@@ -1,7 +1,7 @@
 const frases = [
     "Para mi niña bonita, con mucho cariño",
     "El primer día de cita en el parque, el día de nuestro primer beso. Desde ese día amo acostarme debajo de los árboles a sentir la frescura de ellos",
-    "Los parques representan momentos especiales, como el día en el que nos hicimos pololindas",
+    "Los parques representan momentos especiales, como el día en el que nos hicieron pololindas",
     "Los días en casa se han hecho mis favoritos para estar juntas",
     "Cada salida contigo es formar un nuevo recuerdo especial",
     "Cada vez que me miras fijamente y me das un besito, siento que el mundo se detiene y solo existimos tú y yo",
@@ -16,42 +16,30 @@ const frases = [
     "Te veo y solo puedo pensar en que eres la persona más maravillosa y hermosa del mundo ",
     "Quiero llevarte conmigo a donde vaya porque eres mi lugar favorito",
     "Para la persona más linda y preciosa y bonita y especial e increible del mundo, te amo mi ani",
-    "Eres el amor de mi vida, la mujer de mis sueños, la persona de mis anhelos, simplemente, eres mi todo",
+    "Eres el amor de mi vida, la mujer de mis sueños, la persona de mis anhelos, simplemente, eres mi todo"
 ];
 
 const fotos = [
-    "foto1.jpg.", 
-    "foto2.jpg.", 
-    "foto3.jpg.",
-    "foto4.jpg.",
-    "foto5.jpg.",
-    "foto6.jpg.",
-    "foto7.jpg.",
-    "foto8.jpg.",
-    "foto9.jpg.",
-    "foto10.jpg.",
-    "foto11.jpg.",
-    "foto12.jpg.",
-    "foto13.jpg.",
-    "foto14.jpg.",
-    "foto15.jpg.",
-    "foto16.jpg.",
-    "foto17.jpg.",
+    "foto1.jpg.", "foto2.jpg.", "foto3.jpg.", "foto4.jpg.",
+    "foto5.jpg.", "foto6.jpg.", "foto7.jpg.", "foto8.jpg.",
+    "foto9.jpg.", "foto10.jpg.", "foto11.jpg.", "foto12.jpg.",
+    "foto13.jpg.", "foto14.jpg.", "foto15.jpg.", "foto16.jpg.",
+    "foto17.jpg.", "foto1.jpg." // Agregué una extra para que coincida con la cantidad de frases
 ];
 
 let i = 0;
 
 function cambiar() {
-
     i = (i + 1) % frases.length;
+    
     const elementoTexto = document.getElementById("texto");
     const elementoImagen = document.getElementById("imagen");
 
     if (elementoTexto && elementoImagen) {
         elementoTexto.innerHTML = frases[i];
         elementoImagen.src = fotos[i];
+        console.log("Cambiado a la frase " + i);
+    } else {
+        console.error("No encontré los IDs 'texto' o 'imagen' en el HTML");
     }
 }
-
-// Para que funcione al hacer clic en cualquier parte de la pantalla:
-document.addEventListener("click", cambiar);
