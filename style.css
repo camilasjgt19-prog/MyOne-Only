@@ -1,15 +1,35 @@
+body {
+    background-color: #fff0f5; /* Rosa lavanda muy clarito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Para que no salga la barra de scroll */
+}
+
 #contenedor {
     text-align: center;
-    margin-top: 50px;
     cursor: pointer;
+    padding: 20px;
 }
+
 #imagen {
-    max-width: 90%;
+    max-width: 85%;
+    max-height: 70vh; /* Para que la foto no sea más grande que la pantalla */
     height: auto;
-    border-radius: 15px;
+    border: 10px solid white; /* Efecto de borde de foto Polaroid/Antigua */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Sombra para que resalte */
+    border-radius: 4px;
+    transition: opacity 0.5s ease; /* Transición suave al cambiar */
 }
+
 #texto {
-    font-family: 'Comic Sans MS', sans-serif;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    /* Aquí está tu Comic Sans con seguridad */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 1.4rem;
+    color: #5a5a5a;
+    margin-top: 25px;
+    padding: 0 15px;
+    line-height: 1.4; /* Espacio entre líneas para que sea fácil de leer */
 }
