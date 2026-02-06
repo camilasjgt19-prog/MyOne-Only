@@ -1,12 +1,14 @@
 body {
-   background: linear-gradient(135deg, #fff0f5 0%, #fff5f0 100%);
+    background: linear-gradient(135deg, #fff0f5 0%, #fff5f0 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /* Evita que aparezcan barras de desplazamiento con los corazones */
     position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 body::before { content: "🌸"; position: absolute; top: 20px; left: 20px; font-size: 2rem; }
@@ -42,4 +44,5 @@ body::after { content: "✨"; position: absolute; bottom: 20px; right: 20px; fon
     padding: 0 15px;
     line-height: 1.4; /* Espacio entre líneas para que sea fácil de leer */
 }
+
 
