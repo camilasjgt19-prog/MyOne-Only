@@ -20,11 +20,11 @@ const frases = [
 ];
 
 const fotos = [
-    "foto1.jpg.", "foto2.jpg.", "foto3.jpg.", "foto4.jpg.",
-    "foto5.jpg.", "foto6.jpg.", "foto7.jpg.", "foto8.jpg.",
-    "foto9.jpg.", "foto10.jpg.", "foto11.jpg.", "foto12.jpg.",
-    "foto13.jpg.", "foto14.jpg.", "foto15.jpg.", "foto16.jpg.",
-    "foto17.jpg.", "foto1.jpg." // Agregué una extra para que coincida con la cantidad de frases
+    "foto1.jpg.jpeg", "foto2.jpg.jpeg", "foto3.jpg.jpeg", "foto4.jpg.jpeg",
+    "foto5.jpg.jpeg", "foto6.jpg.jpeg", "foto7.jpg.jpeg", "foto8.jpg.jpeg",
+    "foto9.jpg.jpeg", "foto10.jpg.jpeg", "foto11.jpg.jpeg", "foto12.jpg.jpeg",
+    "foto13.jpg.jpeg", "foto14.jpg.jpeg", "foto15.jpg.jpeg", "foto16.jpg.jpeg",
+    "foto17.jpg.jpeg", "foto1.jpg.jpeg" // Agregué una extra para que coincida con la cantidad de frases
 ];
 
 let i = 0;
