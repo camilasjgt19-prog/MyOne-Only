@@ -1,35 +1,45 @@
 body {
-    background-color: #fff0f5; /* Rosa lavanda muy clarito */
+   background: linear-gradient(135deg, #fff0f5 0%, #fff5f0 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden; /* Para que no salga la barra de scroll */
+    overflow: hidden;
+    position: relative;
 }
+
+body::before { content: "🌸"; position: absolute; top: 20px; left: 20px; font-size: 2rem; }
+body::after { content: "✨"; position: absolute; bottom: 20px; right: 20px; font-size: 2rem; }
 
 #contenedor {
     text-align: center;
     cursor: pointer;
     padding: 20px;
+    z-index: 2;
 }
 
 #imagen {
     max-width: 85%;
     max-height: 70vh; /* Para que la foto no sea más grande que la pantalla */
     height: auto;
-    border: 10px solid white; /* Efecto de borde de foto Polaroid/Antigua */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Sombra para que resalte */
+    border: 10px solid white; 
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4); /* Sombra para que resalte */
     border-radius: 4px;
-    transition: opacity 0.5s ease; /* Transición suave al cambiar */
+    transition: opacity 0.3s ease; /* Transición suave al cambiar */
+}
+    #imagen:hover {
+    transform: scale(1.02) rotate(1deg);
 }
 
 #texto {
     /* Aquí está tu Comic Sans con seguridad */
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    font-size: 1.4rem;
-    color: #5a5a5a;
-    margin-top: 25px;
+    font-size: 1.5rem;
+    color: #d81b60;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
     padding: 0 15px;
     line-height: 1.4; /* Espacio entre líneas para que sea fácil de leer */
 }
+
