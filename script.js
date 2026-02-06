@@ -1,5 +1,5 @@
 const frases = [
-    "Para mi niña bonita, con mucho cariño",
+    "Para mi niña bonita, con mucho cariño", // ESTA SALDRÁ SIN FOTO
     "El primer día de cita en el parque, el día de nuestro primer beso. Desde ese día amo acostarme debajo de los árboles a sentir la frescura de ellos",
     "Los parques representan momentos especiales, como el día en el que nos hicieron pololindas",
     "Los días en casa se han hecho mis favoritos para estar juntas",
@@ -20,6 +20,7 @@ const frases = [
 ];
 
 const fotos = [
+    "",// ESPACIO VACÍO PARA LA PRIMERA FRASE
     "foto1.jpg.jpeg", "foto2.jpg.jpeg", "foto3.jpg.jpeg", "foto4.jpg.jpeg",
     "foto5.jpg.jpeg", "foto6.jpg.jpeg", "foto7.jpg.jpeg", "foto8.jpg.jpeg",
     "foto9.jpg.jpeg", "foto10.jpg.jpeg", "foto11.jpg.jpeg", "foto12.jpg.jpeg",
@@ -28,13 +29,9 @@ const fotos = [
 ];
 
 let i = 0;
-function cambiar() {
-    i = (i + 1); // Aumentamos para ir a la siguiente
 
-    // Si pasamos la última frase, volvemos a la primera
-    if (i >= frases.length) {
-        i = 0;
-    }
+function cambiar() {
+    i = (i + 1) % frases.length;
     
     const elementoTexto = document.getElementById("texto");
     const elementoImagen = document.getElementById("imagen");
@@ -42,12 +39,16 @@ function cambiar() {
     if (elementoTexto && elementoImagen) {
         elementoTexto.innerHTML = frases[i];
 
-        // Solo cambia la foto si existe una foto para ese número de frase
-        // (Como tienes 18 frases y 17 fotos, la última frase repetirá la última foto o puedes dejar una fija)
-        if (fotos[i]) {
+        // Si el nombre de la foto está vacío (como en la posición 0), ocultamos la imagen
+        if (fotos[i] === "") {
+            elementoImagen.style.display = "none";
+        } else {
+            elementoImagen.style.display = "block";
             elementoImagen.src = fotos[i];
         }
     }
 }
+
+
 
 
