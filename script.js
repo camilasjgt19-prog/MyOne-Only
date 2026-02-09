@@ -15,7 +15,7 @@ const frases = [
     "El amor que siento por ti se refleja en mi día a día, y en lo mucho que deseo cuidar de tu corazón",
     "Te veo y solo puedo pensar en que eres la persona más maravillosa y hermosa del mundo ",
     "Quiero llevarte conmigo a donde vaya, porque eres mi lugar favorito",
-    "Para la persona más linda, preciosa, bonita, especial e increible del mundo, te amo mí ani",
+    "Para la persona más linda, preciosa, bonita, especial e increíble del mundo, te amo mí ani",
     "Eres el amor de mi vida, la mujer de mis sueños, la persona de mis anhelos, simplemente, eres mi todo"
 ];
 
@@ -65,6 +65,7 @@ function lanzarDecoracion() {
         setTimeout(() => { el.remove(); }, 3000);
     }
 }
+
 
 
 
