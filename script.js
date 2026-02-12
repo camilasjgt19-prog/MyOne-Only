@@ -28,8 +28,18 @@ const fotos = [
 ];
 
 let i = 0;
+let musicaIniciada = false; 
 
 function cambiar() {
+    if (!musicaIniciada) {
+        const cancion = document.getElementById("miMusica");
+        if (cancion) {
+            cancion.play().catch(error => console.log("Esperando interacción para audio"));
+            musicaIniciada = true;
+        }
+    }
+    // ------------------------
+
     i = (i + 1) % frases.length;
     
     const elementoTexto = document.getElementById("texto");
@@ -65,6 +75,7 @@ function lanzarDecoracion() {
         setTimeout(() => { el.remove(); }, 3000);
     }
 }
+
 
 
 
